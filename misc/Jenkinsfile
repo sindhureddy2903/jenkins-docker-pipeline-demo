@@ -9,6 +9,7 @@ node {
      nodejs(nodeJSInstallationName: 'nodejs') {
        sh 'npm install --only=dev'
        sh 'npm test'
+       sh 'ng e2e'
      }
    }
    stage('docker build/push') {
